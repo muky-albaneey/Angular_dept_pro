@@ -26,9 +26,9 @@ export class DashboardComponent implements OnInit{
   newEdit:any = {
      id: '0fbe4fce-cb0a-4033-bc1f-72d946981abe',
     name: 'Devops'
-    "id": "",
-    "name":"",
-    "created":""
+    // "id": "",
+    // "name":"",
+    // "created":""
   }
   ngOnInit(): void {
     this.getDept();
@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit{
   }
 
   updateDept() {
-    // console.log(this.newEdit);
+    console.log(this.newEdit);
 
     this.masterServ.updateDepartment(this.newEdit).subscribe({
       next: (response: any) => {
