@@ -21,7 +21,6 @@ export class DashboardComponent implements OnInit{
   deptList : DepartmentType[] = [];
 
   newDept:any = {
-
     "name": ""
   }
   newEdit:any = {
