@@ -21,13 +21,14 @@ export class DashboardComponent implements OnInit{
   deptList : DepartmentType[] = [];
 
   newDept:any = {
+
     "name": ""
   }
   newEdit:any = {
-     id: '0fbe4fce-cb0a-4033-bc1f-72d946981abe',
-    name: 'Devops'
-    // "id": "",
-    // "name":"",
+    //  id: '0fbe4fce-cb0a-4033-bc1f-72d946981abe',
+    // name: 'Devops'
+    "id": "",
+    "name":"",
     // "created":""
   }
   ngOnInit(): void {
@@ -71,7 +72,7 @@ export class DashboardComponent implements OnInit{
   updateDept() {
     console.log(this.newEdit);
 
-    this.masterServ.updateDepartment(this.newEdit).subscribe({
+    this.masterServ.updateDepartment(this.newDept).subscribe({
       next: (response: any) => {
         console.log('Response:', response);
         // Handle successful response
